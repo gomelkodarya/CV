@@ -1,0 +1,17 @@
+.footer {
+    height: 200px;
+    background-color: #d2ffc5;
+}
+
+.footerContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.linksBlock {
+    width: 600px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

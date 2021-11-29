@@ -1,0 +1,25 @@
+.project {
+    width: 450px;
+    background-color: #b9b9b9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image {
+    width: 450px;
+    height: 450px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    background-color: whitesmoke;
+}
+
+.description {
+
+}
