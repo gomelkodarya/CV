@@ -1,0 +1,69 @@
+@import './src/common/styles/sass/variables';
+
+.contactBlock {
+    background-color: $bgSecondColor;
+    padding: 50px 0;
+
+    .contactContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .form {
+            width: 480px;
+            height: 300px;
+            background-color: $bgSecondColor;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            @media screen and(max-width: 650px){
+                width: 100%;
+            }
+
+            input {
+                border-radius: 6px;
+                border: 2px solid $primaryColor;
+                height: 40px;
+                background-color: $bgColor;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                color: $textColor;
+            }
+
+            textarea {
+                border-radius: 6px;
+                border: 2px solid $primaryColor;
+                height: 150px;
+                background-color: $bgColor;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                color: $textColor;
+            }
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+            background-color: $bgSecondColor;
+            border: 2px solid $primaryColor;
+            border-radius: 35px;
+            color: $textColor;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 25px;
+
+            &:hover {
+                background-color: $primaryColor;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+

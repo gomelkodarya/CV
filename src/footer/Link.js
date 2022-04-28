@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./Link.module.css";
+import style from "./Link.module.scss";
 
-export const Link = () => {
+export const Link = (props) => {
     return (
-        <div className={style.link}></div>
+        <div style={props.style} className={style.link}></div>
     )
 }
