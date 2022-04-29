@@ -19,6 +19,15 @@
             width: 430px;
             font-size: 30px;
         }
+        @media screen and(max-width: 1054px){
+            width: 330px;
+            font-size: 20px;
+        }
+        @media screen and(max-width: 375px){
+            width: 270px;
+            font-size: 15px;
+        }
+
 
         h1 {
             color: $primaryColor;
@@ -26,6 +35,12 @@
             margin: 0;
             @media screen and(max-width: 1207px){
                 font-size: 40px;
+            }
+            @media screen and(max-width: 1054px){
+                font-size: 30px;
+            }
+            @media screen and(max-width: 375px) {
+                font-size: 25px;
             }
         }
 
@@ -42,7 +57,7 @@
         right: 0;
         clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
 
-        @media screen and(max-width: 1057px){
+        @media screen and(max-width: 867px){
            display: none;
         }
 
@@ -59,7 +74,16 @@
         position: relative;
         z-index: 1;
         box-shadow: 0px 0px 10px #000;
+
+        @media screen and(max-width: 1054px){
+            width: 350px;
+            height: 450px;
         }
+        @media screen and(max-width: 375px){
+            width: 300px;
+            height: 400px;
+        }
+    }
 }
 
 
