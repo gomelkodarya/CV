@@ -1,4 +1,5 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
 .mainBlock {
     height: 100vh;
@@ -9,11 +10,8 @@
     }
 
     .text {
+        @include text($fontFamily, 40px, 700, $textColor);
         width: 550px;
-        font-family: 'Poppins', sans-serif;
-        color: $textColor;
-        font-size: 40px;
-        font-weight: 700;
         text-transform: uppercase;
         @media screen and(max-width: 1207px){
             width: 430px;
@@ -64,13 +62,11 @@
     }
 
     .photo {
+        @include image(cover, center, no-repeat);
         width: 400px;
         height: 550px;
         background-image: url('../assets/image/photo.jpg');
         border-radius: 6px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         position: relative;
         z-index: 1;
         box-shadow: 0px 0px 10px #000;

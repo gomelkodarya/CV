@@ -1,25 +1,21 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
 .project {
     width: 500px;
-    //background-color: $bgSecondColor;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    //border-radius: 0 0 6px 6px;
 
     .image {
+        @include flex(flex, center);
+        @include image(cover, center, no-repeat);
         width: 100%;
         height: 350px;
-        display: flex;
-        justify-content: center;
         align-items: center;
         border-bottom: 6px solid $primaryColor;
         border-radius: 6px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         position: relative;
         &::before {
             position: absolute;
@@ -33,17 +29,14 @@
         }
 
         .btn {
+            @include text($primaryFontFamily, 15px, 500, $textColor);
             width: 90px;
             height: 40px;
             background-color: $bgSecondColor;
             border: 2px solid $primaryColor;
             border-radius: 35px;
-            color: $textColor;
             text-decoration: none;
             line-height: 34px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 15px;
-            font-weight: 500;
             position: relative;
             z-index: 1;
 
@@ -58,19 +51,13 @@
         padding: 25px 20px 25px 20px;
 
         .title {
-            font-family: 'Poppins', sans-serif;
-            color: $textColor;
-            font-size: 20px;
-            font-weight: 700;
+            @include text($fontFamily, 20px, 700, $textColor);
             text-transform: uppercase;
             margin-top: 0;
         }
 
         .description {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 15px;
-            color: $textColor;
-            font-weight: 500;
+            @include text($primaryFontFamily, 15px, 500, $textColor);
             line-height: 1.6;
         }
     }

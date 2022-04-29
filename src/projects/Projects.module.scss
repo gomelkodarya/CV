@@ -1,4 +1,5 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
 .projectsBlock {
     padding: 50px 0;
@@ -9,9 +10,8 @@
         justify-content: flex-start;
 
         .projects {
+            @include flex(flex, space-between);
             width: 100%;
-            display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
             margin-top: 30px;
             align-items: flex-start;

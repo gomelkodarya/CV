@@ -1,15 +1,12 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
 .nav {
-    display: flex;
+    @include flex(flex, space-between);
     width: 350px;
-    justify-content: space-between;
 
     a {
-        font-family: 'Poppins', sans-serif;
-        font-size: 17px;
-        font-weight: 500;
-        color: $textColor;
+        @include text($fontFamily, 17px, 500, $textColor);
         text-decoration: none;
 
         &:hover {

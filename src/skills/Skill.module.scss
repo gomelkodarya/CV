@@ -1,8 +1,8 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
 .skill {
     width: 300px;
-    //background-color: $bgColor;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,30 +10,22 @@
     border-radius: 6px;
 
     .icon {
+        @include image(cover, center, no-repeat);
         width: 40px;
         height: 40px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .skill_info {
         padding: 25px 20px;
 
         .title {
-            font-family: 'Poppins', sans-serif;
-            color: #fff;
-            font-size: 20px;
-            font-weight: 700;
+            @include text($fontFamily, 20px, 700, $textColor);
             text-transform: uppercase;
             margin-top: 0;
         }
 
         .description {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 15px;
-            color: #fff;
-            font-weight: 500;
+            @include text($primaryFontFamily, 15px, 500, $textColor);
             line-height: 1.6;
         }
     }

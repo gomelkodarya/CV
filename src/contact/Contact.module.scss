@@ -1,4 +1,5 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
 .contactBlock {
     background-color: $bgSecondColor;
@@ -9,12 +10,11 @@
         justify-content: flex-start;
 
         .form {
+            @include flex(flex, space-between);
             width: 480px;
             height: 300px;
             background-color: $bgSecondColor;
-            display: flex;
             flex-direction: column;
-            justify-content: space-between;
             margin-top: 30px;
 
             @media screen and(max-width: 650px){
@@ -22,39 +22,30 @@
             }
 
             input {
+                @include text($primaryFontFamily, 15px, 500, $textColor);
                 border-radius: 6px;
                 border: 2px solid $primaryColor;
                 height: 40px;
                 background-color: $bgColor;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 15px;
-                font-weight: 500;
-                color: $textColor;
             }
 
             textarea {
+                @include text($primaryFontFamily, 15px, 500, $textColor);
                 border-radius: 6px;
                 border: 2px solid $primaryColor;
                 height: 150px;
                 background-color: $bgColor;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 15px;
-                font-weight: 500;
-                color: $textColor;
             }
         }
 
         .btn {
+            @include text($primaryFontFamily, 15px, 500, $textColor);
             width: 100px;
             height: 40px;
             background-color: $bgSecondColor;
             border: 2px solid $primaryColor;
             border-radius: 35px;
-            color: $textColor;
             text-decoration: none;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 15px;
-            font-weight: 500;
             margin-top: 25px;
 
             &:hover {

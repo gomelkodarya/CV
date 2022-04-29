@@ -1,11 +1,11 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
 .header {
     height: 70px;
     background: $bgSecondColor;
 
     .headerContainer {
-        display: flex;
-        justify-content: flex-end;
+        @include flex(flex, flex-end);
     }
 }
